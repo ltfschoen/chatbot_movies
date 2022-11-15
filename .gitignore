@@ -1,0 +1,7 @@
+.rasa/
+actions/__pycache__/
+models_doc2vec/*
+models/
+doc2vec_model_movies.zip
+*.csv
+story_graph.dot

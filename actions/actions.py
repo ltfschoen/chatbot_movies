@@ -16,9 +16,12 @@ from gensim.models.doc2vec import Doc2Vec
 from gensim.parsing.preprocessing import preprocess_string
 
 # Load ML model
-model = Doc2Vec.load(R'\movies_doc2vec') # INSERT FULL PATH
+model = Doc2Vec.load('/home/ubuntu/github/ltfschoen/chatbot_movies/models_doc2vec/movies_doc2vec') # INSERT FULL PATH
 # Load dataset to get movie titles
-df = pd.read_csv(R'\wiki_movie_plots_deduped.csv', sep=',', usecols = ['Release Year', 'Title', 'Plot'])) # INSERT FULL PATH
+df = pd.read_csv(
+	'/home/ubuntu/github/ltfschoen/chatbot_movies/dataset/wiki_movie_plots_deduped.csv',
+	sep=',',
+	usecols = ['Release Year', 'Title', 'Plot']) # INSERT FULL PATH
 df = df[df['Release Year'] >= 2000]
 
 class ActionMovieSearch(Action):
